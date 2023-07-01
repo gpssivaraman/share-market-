@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+position: sticky;
+top: 0;
+background-color:#fff;
+text-align: center;
+padding: 20px;
+}
+nav li {
+    display: inline-block;
+    border-radius: 5px;
+}
+nav li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color:#000;
+}
+
+nav li.active{
+    background-color: blue;
+}
+nav li.active a{
+    color: white;
+}
+
+section{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#Home {
+    background-color: aqua;
+}
+#About {
+    background-color: yellowgreen;
+}
+#Service {
+    background-color: orangered;
+}
+#Contact {
+    background-color: greenyellow;
+}
+

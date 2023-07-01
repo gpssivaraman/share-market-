@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll nav bar</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+    <li class="Home active"><a href="#Home">Home</a></li>
+    <li class="About"><a href="#About">About</a></li>
+    <li class="Service"><a href="#Service">Service</a></li>
+    <li class="Contact"><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>  
+
+  <section id="Home">
+    <h2>This is home section</h2>
+  </section>
+  <section id="About">
+<h2>This is About section</h2>
+  </section>
+  <section id="Service">
+<h2>This is Service section</h2>
+
+  </section>
+  <section id="Contact">
+<h2>This is Contact section</h2>
+  </section>
+<script>
+let sections=document.querySelectorAll('section');
+let navlinks=document.querySelectorAll('ul li');
+window.addEventListener(
+    'scroll',
+    ()=>{
+    let current='';
+   let scrollTop=pageYOffset;
+    sections.forEach(
+         section=>{
+        let sectionTop=section.offsetTop;
+        if(scrollTop>=sectionTop){
+            current=section.getAttribute('id');
+        }
+        
+    }
+    );
+     navlinks.forEach(
+        li=>{
+        li.classList.remove('active');
+    if(li.classList.contains(current)){
+    li.classList.add('active')
+    }
+        
+        }
+     )
+    }
+)
+  </script>
+  </body>
+
+
+</html>
